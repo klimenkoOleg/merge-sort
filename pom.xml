@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.oklimenko</groupId>
+    <artifactId>merge-sort</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>merge-sort</name>
+    <description>Merge Sort implementation on Java and Kotlin</description>
+
+    <modules>
+        <module>mergesort-java-impl</module>
+        <module>mergesort-kotlin-impl</module>
+    </modules>
+
+    <!--<parent>-->
+        <!--<groupId>org.springframework.boot</groupId>-->
+        <!--<artifactId>spring-boot-starter-parent</artifactId>-->
+        <!--<version>2.1.2.RELEASE</version>-->
+        <!--<relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
+    <!--</parent>-->
+
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+
+        <!-- libraries versions -->
+        <spring-boot.version>2.1.2.RELEASE</spring-boot.version>
+
+        <junit.version>4.11</junit.version>
+        <!--<spring-cloud.version>Dalston.SR3</spring-cloud.version>-->
+        <!--<sleuth-zipkin.version>1.0.1.RELEASE</sleuth-zipkin.version>-->
+        <!--<spring-cloud-starter-spectator.version>1.1.2.RELEASE</spring-cloud-starter-spectator.version>-->
+
+        <!--<swagger-documentation.version>0.2.0.4</swagger-documentation.version>-->
+
+        <!--<spring.cloud.kubernetes.version>0.1.6</spring.cloud.kubernetes.version>-->
+        <!--<hystrix-core.version>1.5.12</hystrix-core.version>-->
+
+        <!--<orika-spring-boot-starter.version>1.5.0</orika-spring-boot-starter.version>-->
+
+        <!--<fluent-logger.version>0.3.3</fluent-logger.version>-->
+        <!--<commons-codec.version>1.10</commons-codec.version>-->
+        <!--<logback-more-appenders.version>1.4.2</logback-more-appenders.version>-->
+        <!--<commons-lang3.version>3.6</commons-lang3.version>-->
+        <!--<commons-collections.version>3.2.1</commons-collections.version>-->
+        <!--<prometheus.version>0.4.0</prometheus.version>-->
+        <!--<prometheus-hystrix.version>4.0.0</prometheus-hystrix.version>-->
+
+        <!-- components configuration -->
+        <!--<auth-host>localhost</auth-host>-->
+        <!--<auth-port>9999</auth-port>-->
+        <!--<discovery-host>localhost</discovery-host>-->
+        <!--<discovery-port>8761</discovery-port>-->
+        <!--<zipkin-host>zipkin</zipkin-host>-->
+        <!--<zipkin-port>9411</zipkin-port>-->
+        <!--<graphite-host>10.6.129.215</graphite-host>-->
+        <!--<graphite-port>2003</graphite-port>-->
+
+        <!-- refer to Dockerfile for spring-boot apps)-->
+        <!--<SPRING.PROFILE.ACTIVE></SPRING.PROFILE.ACTIVE>-->
+
+
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- https://mvnrepository.com/artifact/junit/junit -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+        </dependencies>
+       <!-- <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Dalston.SR1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>-->
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <!--<plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                &lt;!&ndash;  For standalone JAR file <configuration><executable>false</executable></configuration> &ndash;&gt;
+                <configuration>
+                    <mainClass>com.virtualpairprogrammers.TomcatWARApplication</mainClass>
+                </configuration>
+            </plugin>-->
+        </plugins>
+
+        <resources>
+            <!--<resource>
+                <filtering>false</filtering>
+                <directory>java-impl/src/main/resources</directory>
+            </resource>-->
+        </resources>
+
+    </build>
+
+
+</project>
